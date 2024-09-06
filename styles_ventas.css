@@ -1,0 +1,75 @@
+html{
+    scroll-behavior:smooth;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+   background-color: #ffffff;
+   
+}
+
+.logo{
+    height: 50px;
+}
+.header{
+    background-color: rgb(21, 101, 192);
+       
+}
+
+.navegacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+.anclas{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.titulo{
+  text-align: center;
+  padding: 15px;
+
+}
+
+.productos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0em;
+    row-gap: 0.4em;
+    
+}
+
+
+.moneda{
+    background-color: hsl(33, 100%, 88%);
+    font-size: 1.5em;
+    border-radius: 15px;
+    align-items:center;
+    height: 150px;
+       
+}
+
+input{
+    font-size:larger;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+button{
+    
+    padding: 10px;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
