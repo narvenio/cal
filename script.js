@@ -28,27 +28,31 @@ let aumento;
 
 function scroll(){
    
-      window.scrollTo(0, 1000);
-      function delay(ms){
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
      
-      async function mostrar_scroll() {
-        console.log("inicio");
-     
-        // espera 2 segundos
-        await delay(500)
-     
-        console.log("despues de 2 segundos")
      
         // continuar con el resto del codigo
         
         window.scrollTo(0, 1000);
       }
       
-}
 
 
+function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+ 
+  async function mostrar_scroll() {
+    console.log("inicio");
+ 
+    // espera 2 segundos
+    await delay(500)
+ 
+    console.log("despues de 2 segundos")
+ 
+    // continuar con el resto del codigo
+    
+    window.scrollTo(0, 1000);
+  }
 
 function borrar(){
     document.getElementById("textbox1").value="";
