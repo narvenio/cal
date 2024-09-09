@@ -40,7 +40,7 @@ const todos        = document.getElementById("container");
  }
 
  function scroll(){
-   window.scrollTo(0,10000);
+   window.scrollTo(0,5000);
  }
 
  function borrar(){
@@ -65,7 +65,7 @@ const todos        = document.getElementById("container");
     scroll();
     if (producto == "" || cantidades == "" || precio_inicial == "" || ganancia == "" || iva == ""){
         resultado.textContent = "Rellena Todos los Campos";
-        scroll();
+       
     
     }else{
 
@@ -96,11 +96,12 @@ const todos        = document.getElementById("container");
     
     resultado.textContent = `El Precio de ${producto} es: ${operacion_precio_final}$`;
     mostrar_scroll();
-    scroll();
+    
     borrar();
     
     }
     }
+    
     
 
 
