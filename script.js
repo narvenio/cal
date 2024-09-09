@@ -68,7 +68,7 @@ function calcular_porcentaje(){
     if(textbox1.value.length == 0 || textbox2.value.length == 0){
         resultado.textContent = ("Escribe un numero");
         mostrar_scroll();
-        scroll();
+        
     }else{
         porcentaje_final = porcentaje_deseado * numero_total / 100;
         resultado.textContent = `El ${porcentaje_deseado}% de ${numero_total} es ${porcentaje_final}`; 
@@ -146,10 +146,10 @@ function calcular_precio_caido(){
     if(textbox9.value.length == 0 || textbox10.value.length == 0){
         resultado.textContent = ("Escribe un numero");
         mostrar_scroll();
-        scroll();
+        
     }
     mostrar_scroll();
-    scroll();
+    
     borrar();
      
 }
