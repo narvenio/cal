@@ -43,9 +43,9 @@ function scroll(){
      
         // continuar con el resto del codigo
         
-        
+        window.scrollTo(0, 1000);
       }
-      window.scrollTo(0, 1000);
+      
 }
 
 function delay(ms){
