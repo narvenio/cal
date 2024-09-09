@@ -24,6 +24,22 @@ let porcentaje_final;
 let descuento_final;
 let aumento;
 
+function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+ 
+  async function mostrar_scroll() {
+    console.log("inicio");
+ 
+    // espera 2 segundos
+    await delay(20000)
+ 
+    console.log("despues de 2 segundos")
+ 
+    // continuar con el resto del codigo
+    console.log("fin");
+  }
+
 function scroll(){
     window.scrollTo(0, 1000);
 }
@@ -51,11 +67,13 @@ function calcular_porcentaje(){
     
     if(textbox1.value.length == 0 || textbox2.value.length == 0){
         resultado.textContent = ("Escribe un numero");
+        mostrar_scroll();
         scroll();
     }else{
         porcentaje_final = porcentaje_deseado * numero_total / 100;
         resultado.textContent = `El ${porcentaje_deseado}% de ${numero_total} es ${porcentaje_final}`; 
     }
+    mostrar_scroll();
     scroll();
     borrar();
 }
@@ -71,8 +89,10 @@ function calcular_descuento(){
 
     if(textbox3.value.length == 0 || textbox4.value.length == 0){
         resultado.textContent = ("Escribe un numero");
+        mostrar_scroll();
         scroll();
     }
+    mostrar_scroll();
     scroll();
     borrar();
 }
@@ -86,8 +106,10 @@ function calcular_aumento(){
     resultado.textContent = `Su precio final es: ${aumento}`;
     if(textbox5.value.length == 0 || textbox6.value.length == 0){
         resultado.textContent = ("Escribe un numero");
+        mostrar_scroll();
         scroll();
     }
+    mostrar_scroll();
     scroll();
     borrar();
 }   
@@ -104,8 +126,10 @@ function calcular_precio_aumentado(){
     resultado.textContent = `Aumento en un ${porcentaje}%`
     if(textbox7.value.length == 0 || textbox8.value.length == 0){
         resultado.textContent = ("Escribe un numero");
+        mostrar_scroll();
         scroll();
     }
+    mostrar_scroll();
     scroll();
     borrar();
 }
@@ -121,12 +145,15 @@ function calcular_precio_caido(){
     resultado.textContent = `El Precio Decayo un ${porcentaje}%`;
     if(textbox9.value.length == 0 || textbox10.value.length == 0){
         resultado.textContent = ("Escribe un numero");
+        mostrar_scroll();
         scroll();
     }
+    mostrar_scroll();
     scroll();
     borrar();
      
 }
+
 
     
                 
