@@ -24,19 +24,43 @@ let porcentaje_final;
 let descuento_final;
 let aumento;
 
-function delay(ms){
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
- 
-  async function mostrar_scroll() {
-    console.log("inicio");
- 
-    // espera 2 segundos
-    await delay(500)
- 
-    console.log("despues de 2 segundos")
- 
-    // continuar con el resto del codigo
+
+
+function scroll(){
+    function delay(ms){
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+     
+      async function mostrar_scroll() {
+        console.log("inicio");
+     
+        // espera 2 segundos
+        await delay(500)
+     
+        console.log("despues de 2 segundos")
+     
+        // continuar con el resto del codigo
+        
+        window.scrollTo(0, 1000);
+      }
+    
+}
+
+function borrar(){
+    document.getElementById("textbox1").value="";
+    document.getElementById("textbox2").value="";
+    document.getElementById("textbox3").value="";
+    document.getElementById("textbox4").value="";
+    document.getElementById("textbox5").value="";
+    document.getElementById("textbox6").value="";
+    document.getElementById("textbox7").value="";
+    document.getElementById("textbox8").value="";
+    document.getElementById("textbox9").value="";
+    document.getElementById("textbox10").value="";
+}
+
+
+function calcular_porcentaje(){
     
     porcentaje_deseado = Number(textbox1.value);
     numero_total = Number(textbox2.value);
@@ -55,31 +79,6 @@ function delay(ms){
     }
     scroll();
     console.log("fin");
-  }
-
-function scroll(){
-    window.scrollTo(0, 1000);
-}
-
-function borrar(){
-    document.getElementById("textbox1").value="";
-    document.getElementById("textbox2").value="";
-    document.getElementById("textbox3").value="";
-    document.getElementById("textbox4").value="";
-    document.getElementById("textbox5").value="";
-    document.getElementById("textbox6").value="";
-    document.getElementById("textbox7").value="";
-    document.getElementById("textbox8").value="";
-    document.getElementById("textbox9").value="";
-    document.getElementById("textbox10").value="";
-}
-
-
-function calcular_porcentaje(){
-  
-    
-    mostrar_scroll();
-   
     borrar();
 }
 
@@ -158,3 +157,16 @@ function calcular_precio_caido(){
     borrar();
      
 }
+
+    
+                
+        
+    
+
+    
+
+   
+    
+
+   
+
