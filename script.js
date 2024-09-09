@@ -27,7 +27,9 @@ let aumento;
 
 
 function scroll(){
-    function delay(ms){
+   
+      window.scrollTo(0, 1000);
+      function delay(ms){
         return new Promise(resolve => setTimeout(resolve, ms));
       }
      
@@ -41,10 +43,27 @@ function scroll(){
      
         // continuar con el resto del codigo
         
-        window.scrollTo(0, 1000);
+        
       }
-    
+      window.scrollTo(0, 1000);
 }
+
+function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+ 
+  async function mostrar_scroll() {
+    console.log("inicio");
+ 
+    // espera 2 segundos
+    await delay(500)
+ 
+    console.log("despues de 2 segundos")
+ 
+    // continuar con el resto del codigo
+    
+    window.scrollTo(0, 1000);
+  }
 
 function borrar(){
     document.getElementById("textbox1").value="";
@@ -77,8 +96,8 @@ function calcular_porcentaje(){
         porcentaje_final = porcentaje_deseado * numero_total / 100;
         resultado.textContent = `El ${porcentaje_deseado}% de ${numero_total} es ${porcentaje_final}`; 
     }
-    scroll();
-    console.log("fin");
+    mostrar_scroll();
+    
     borrar();
 }
 
