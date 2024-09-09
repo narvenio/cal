@@ -32,7 +32,7 @@ function delay(ms){
     console.log("inicio");
  
     // espera 2 segundos
-    await delay(1000)
+    await delay(500)
  
     console.log("despues de 2 segundos")
  
@@ -48,11 +48,12 @@ function delay(ms){
         
 
 
-        scroll();
+        
     }else{
         porcentaje_final = porcentaje_deseado * numero_total / 100;
         resultado.textContent = `El ${porcentaje_deseado}% de ${numero_total} es ${porcentaje_final}`; 
     }
+    scroll();
     console.log("fin");
   }
 
@@ -157,15 +158,3 @@ function calcular_precio_caido(){
     borrar();
      
 }
-
-    
-                
-        
-    
-
-    
-
-   
-    
-
-   
