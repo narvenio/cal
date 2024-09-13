@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,15 +13,20 @@
         <div class="container">
             <nav class="navegacion text-white">
                 <img src="https://cdn-icons-png.flaticon.com/512/7407/7407078.png" alt="logo" class="logo">
+                <div class="lineas" onclick="lineas()">
+                    <div class="linea"></div>
+                    <div class="linea"></div> 
+                    <div class="linea"></div>     
+                </div>
                 <div class="anclas">
-                    <a href="index.html" class="text-reset" >Calcular Porcentajes</a>
+                    <a href="index.html" class="text-reset">Calcular Porcentajes</a>
                     <a href="calcular_ventas.html" class="text-reset">Calcular Ventas</a>
                     <a href="calcular_precios.html" class="text-reset">Calcular Precios</a>
                     <a href="introducir_inventario.html" class="text-reset">Sistema de inventario</a>
                 </div>
             </nav>
+           
         </div>
-
     </header>
 
     <div class="contenedor_principal">
@@ -76,6 +81,11 @@
     
         <h1 id="resultado"></h1><br>
     </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
     
     <script src="script.js"></script>
 </body>
