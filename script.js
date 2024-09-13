@@ -1,13 +1,3 @@
-//const textbox1  = document.getElementById("textbox1");
-//const textbox2  = document.getElementById("textbox2");
-//const textbox3  = document.getElementById("textbox3");
-//const textbox4  = document.getElementById("textbox4");
-//const textbox5  = document.getElementById("textbox5");
-//const textbox6  = document.getElementById("textbox6");
-//const textbox7  = document.getElementById("textbox7");
-//const textbox8  = document.getElementById("textbox8");
-//const textbox9  = document.getElementById("textbox9");
-//const textbox10 = document.getElementById("textbox10");
 const boton     = document.getElementById("boton").value;
 const boton_descuento = document.getElementById("boton_descuento").value;
 const boton_aumento = document.getElementById("boton_aumento").value;
@@ -24,6 +14,11 @@ let porcentaje_final;
 let descuento_final;
 let aumento;
 
+function lineas(){
+    const lineas = document.querySelector(".linea");
+    const anclas = document.querySelector(".anclas");
+    anclas.classList.toggle("active");
+}
 
 
 function scroll(){
@@ -101,11 +96,10 @@ function calcular_descuento(){
 
     if(textbox3.value.length == 0 || textbox4.value.length == 0){
         resultado.textContent = ("Escribe un numero");
-        mostrar_scroll();
-        scroll();
+        
     }
     mostrar_scroll();
-    scroll();
+    
     borrar();
 }
   
@@ -119,10 +113,10 @@ function calcular_aumento(){
     if(textbox5.value.length == 0 || textbox6.value.length == 0){
         resultado.textContent = ("Escribe un numero");
         mostrar_scroll();
-        scroll();
+       
     }
     mostrar_scroll();
-    scroll();
+   
     borrar();
 }   
 
@@ -139,10 +133,9 @@ function calcular_precio_aumentado(){
     if(textbox7.value.length == 0 || textbox8.value.length == 0){
         resultado.textContent = ("Escribe un numero");
         mostrar_scroll();
-        scroll();
-    }
+     }
     mostrar_scroll();
-    scroll();
+    
     borrar();
 }
 
@@ -158,13 +151,26 @@ function calcular_precio_caido(){
     if(textbox9.value.length == 0 || textbox10.value.length == 0){
         resultado.textContent = ("Escribe un numero");
         mostrar_scroll();
-        scroll();
+      
     }
     mostrar_scroll();
-    scroll();
+ 
     borrar();
      
 }
+
+    
+                
+        
+    
+
+    
+
+   
+    
+
+   
+
 
     
                 
