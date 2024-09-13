@@ -6,19 +6,24 @@ const precio_caido = document.getElementById("precio_caido").value;
 const resultado = document.getElementById("resultado");
 const descuento = document.getElementById("descuento");
 const porcentaje = document.getElementById("porcentaje");
-
-
 let porcentaje_deseado;
 let numero_total;
 let porcentaje_final;
 let descuento_final;
 let aumento;
 
-function lineas(){
-    const lineas = document.querySelector(".linea");
-    const anclas = document.querySelector(".anclas");
+lineas = document.querySelector(".linea");
+lineas.onclick = function(){
+    anclas = document.querySelector(".anclas");
     anclas.classList.toggle("active");
 }
+
+
+//function lineas(){
+//    const lineas = document.querySelector(".linea");
+//    const anclas = document.querySelector(".anclas");
+//    anclas.classList.toggle("active");
+//}
 
 
 function scroll(){
