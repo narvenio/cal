@@ -77,9 +77,3 @@ const calcular     = document.getElementById("calcular").value;
     }
     
 }
-
-    borrar();
-   
-    }
-    
-}
