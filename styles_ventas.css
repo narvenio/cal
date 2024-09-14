@@ -1,13 +1,7 @@
-html{
-    scroll-behavior:smooth;
-
-}
-
 body{
     margin: 0;
     padding: 0;
    background-color: #ffffff;
-   
 }
 
 .logo{
@@ -34,8 +28,7 @@ body{
 
 .titulo{
   text-align: center;
-  padding: 15px;
-
+  padding: 10px;
 }
 
 .productos{
@@ -72,4 +65,71 @@ button{
 
 h1{
     text-align: center;
+}
+@media screen and (max-width: 1320px) {
+    .anclas{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .anclas{
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    
+    body{
+        width: 100%;
+    }
+    .lineas{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .lineas .linea{
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+    }
+    .logo{
+        height: 50px;
+    }
+    
+    .anclas{
+        height: 400px;
+        top: 50px;
+        position: absolute;
+        background-color: rgb(79, 198, 202);
+        width: 100%;
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+        list-style: none;
+        opacity: 0;
+        overflow: hidden;
+        display:none;
+        transition: 0.5s;
+    }
+    .anclas.active{
+        height: 400px;
+        opacity: 1;
+        display:block;
+        
+    }
+    .anclas a{
+        width: fit-content;
+        display: block;
+        margin: 50px auto 0 auto;
+        text-align: center;
+        bottom: 10px;
+        transition: 0.5s;
+        overflow: hidden;
+        
+    }
+    
+    
+    
 }
