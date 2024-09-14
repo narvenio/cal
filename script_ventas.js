@@ -8,41 +8,11 @@ const resultado    = document.getElementById("resultado");
 const calcular     = document.getElementById("calcular").value;
 const todos        = document.getElementById("container");
 
- function delay(ms){
-   return new Promise(resolve => setTimeout(resolve, ms));
- }
-
- async function mostrar_scroll() {
-   console.log("inicio");
-
-   // espera 2 segundos
-   await delay(20000)
-
-   console.log("despues de 2 segundos")
-
-   // continuar con el resto del codigo
-   console.log("fin");
- }
-
- function empezar_calculo(){
-
-   nombre_producto.addEventListener("keydown", function(event){
-      if(event.key === "Enter"){
-         event.preventDefault();
-         console.log(`key down = ${event.key} `)
-         document.getElementById("calcular").click();
-         
-      }
-   })
-   document.addEventListener("keydown", event=>{
-
-   })
- }
-
- function scroll(){
-   window.scrollTo(0,5000);
- }
-
+const lineas = document.querySelector(".linea");
+lineas.onclick = function(){
+    const anclas = document.querySelector(".anclas");
+    anclas.classList.toggle("active");
+}  
  function borrar(){
     
     document.getElementById("nombre_producto").value ="";
@@ -54,7 +24,7 @@ const todos        = document.getElementById("container");
     document.getElementById("resultado").value ="";
  }
  function venta(){
-   
+    
     let producto = (nombre_producto.value);
     let cantidades = Number(cantidad_producto.value);
     let precio_inicial = Number(precio.value);
@@ -62,10 +32,9 @@ const todos        = document.getElementById("container");
     let descuento_precio = Number(descuento.value);
     let iva1 = Number(iva.value);
     let iva2 = iva1 / 100;
-    scroll();
+    
     if (producto == "" || cantidades == "" || precio_inicial == "" || ganancia == "" || iva == ""){
         resultado.textContent = "Rellena Todos los Campos";
-       
     
     }else{
 
@@ -82,7 +51,7 @@ const todos        = document.getElementById("container");
     let operacion_precio_final;
     let venta;
     let cantidad;
-    
+
     cantidad = cantidades * precio_inicial;
 
     aumento = (ganancia * cantidad ) / 100;
@@ -95,12 +64,12 @@ const todos        = document.getElementById("container");
     
     
     resultado.textContent = `El Precio de ${producto} es: ${operacion_precio_final}$`;
-    mostrar_scroll();
-    
+   
     borrar();
     
     }
     }
+    
     
     
 
