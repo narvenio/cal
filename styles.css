@@ -126,7 +126,7 @@ button:hover{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 800px){
     
     body{
         width: 100%;
@@ -176,4 +176,27 @@ button:hover{
     }
    
     
+}
+
+@media screen and (max-width: 500px){
+    .input{
+        justify-content: center;
+        font-size: xx-large;
+        
+    }
+
+    label{
+        font-size: 1.21em;
+
+    }
+    .contenido{
+        display: flex;
+        column-gap: 1em;
+        row-gap: 3em;
+        flex-direction: column;
+        
+    }
+    button{
+        bottom: 50px;
+    }
 }
