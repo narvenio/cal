@@ -178,7 +178,7 @@ button:hover{
     
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 400px){
     .input{
         justify-content: center;
         font-size: xx-large;
@@ -186,7 +186,7 @@ button:hover{
     }
 
     label{
-        font-size: 1.21em;
+        font-size: 1.5em;
 
     }
     .contenido{
