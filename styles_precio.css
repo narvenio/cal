@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -97,9 +100,13 @@ h1{
     .logo{
         height: 50px;
     }
-    
+    .anclas.active{
+        height: 400px;
+        opacity: 1;
+        display:block;
+    }
     .anclas{
-        height: 300px;
+        height: 400px;
         top: 50px;
         position: absolute;
         background-color: rgb(79, 198, 202);
@@ -113,12 +120,6 @@ h1{
         display:none;
         transition: 0.5s;
     }
-    .anclas.active{
-        height: 400px;
-        opacity: 1;
-        display:block;
-        
-    }
     .anclas a{
         width: fit-content;
         display: block;
@@ -127,9 +128,7 @@ h1{
         bottom: 10px;
         transition: 0.5s;
         overflow: hidden;
-        
     }
-    
-    
+   
     
 }
