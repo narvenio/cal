@@ -8,9 +8,11 @@ const resultados    = document.getElementById("resultado-todos");
 const resultado    = document.getElementById("resultado-individual");
 const calcular     = document.getElementById("calcular").value;
 
- function scroll(){
-    window.scrollTo(0,1000);
- }
+const lineas = document.querySelector(".linea");
+lineas.onclick = function(){
+    const anclas = document.querySelector(".anclas");
+    anclas.classList.toggle("active");
+}
 
  function borrar(){
     document.getElementById("nombre_producto").value ="";
@@ -29,10 +31,9 @@ const calcular     = document.getElementById("calcular").value;
     if (producto == "" || cantidades == "" || precio_inicial == "" || ganancia == "" || iva == ""){
         
         resultado.textContent = "Rellena Todos los Campos";
-        scroll();
            
     }else{
-    
+   
     let aumento;
     let operacion_ganancia2;
     let operacion_precio_final;
@@ -49,7 +50,11 @@ const calcular     = document.getElementById("calcular").value;
     // Resultado en Pantalla
     //resultados.textContent = 
     resultado.textContent = `Cada ${producto} esta: ${precio_final_individual}$`;
-    scroll();
+    borrar();
+   
+    }
+    
+}
     borrar();
    
     }
