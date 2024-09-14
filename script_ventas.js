@@ -8,11 +8,30 @@ const resultado    = document.getElementById("resultado");
 const calcular     = document.getElementById("calcular").value;
 const todos        = document.getElementById("container");
 
-const lineas = document.querySelector(".linea");
-lineas.onclick = function(){
-    const anclas = document.querySelector(".anclas");
-    anclas.classList.toggle("active");
-}  
+function lineas(){
+  const lineas = document.querySelector(".linea");
+  const anclas = document.querySelector(".anclas");
+  anclas.classList.toggle("active");
+}
+
+function delay(ms){
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function mostrar_scroll() {
+  console.log("inicio");
+
+  // espera 2 segundos
+  await delay(500)
+
+  console.log("despues de 2 segundos")
+
+  // continuar con el resto del codigo
+  
+  window.scrollTo(0, 1000);
+}
+
+ 
  function borrar(){
     
     document.getElementById("nombre_producto").value ="";
@@ -24,7 +43,7 @@ lineas.onclick = function(){
     document.getElementById("resultado").value ="";
  }
  function venta(){
-    
+   
     let producto = (nombre_producto.value);
     let cantidades = Number(cantidad_producto.value);
     let precio_inicial = Number(precio.value);
@@ -35,6 +54,7 @@ lineas.onclick = function(){
     
     if (producto == "" || cantidades == "" || precio_inicial == "" || ganancia == "" || iva == ""){
         resultado.textContent = "Rellena Todos los Campos";
+        mostrar_scroll();
     
     }else{
 
@@ -51,7 +71,7 @@ lineas.onclick = function(){
     let operacion_precio_final;
     let venta;
     let cantidad;
-
+    
     cantidad = cantidades * precio_inicial;
 
     aumento = (ganancia * cantidad ) / 100;
@@ -64,15 +84,10 @@ lineas.onclick = function(){
     
     
     resultado.textContent = `El Precio de ${producto} es: ${operacion_precio_final}$`;
-   
+    mostrar_scroll();
+    
     borrar();
     
     }
     }
-    
-    
-    
-
-
-    
-
+   
