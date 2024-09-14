@@ -20,8 +20,6 @@ body{
         
 }
 
-
-
 .navegacion{
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +145,11 @@ button:hover{
     .logo{
         height: 50px;
     }
-    
+    .anclas.active{
+        height: 400px;
+        opacity: 1;
+        display:block;
+    }
     .anclas{
         height: 400px;
         top: 50px;
@@ -163,12 +165,6 @@ button:hover{
         display:none;
         transition: 0.5s;
     }
-    .anclas.active{
-        height: 400px;
-        opacity: 1;
-        display:block;
-        
-    }
     .anclas a{
         width: fit-content;
         display: block;
@@ -177,9 +173,7 @@ button:hover{
         bottom: 10px;
         transition: 0.5s;
         overflow: hidden;
-        
     }
-    
-    
+   
     
 }
