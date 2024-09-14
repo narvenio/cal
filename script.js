@@ -12,9 +12,9 @@ let porcentaje_final;
 let descuento_final;
 let aumento;
 
-lineas = document.querySelector(".linea");
+const lineas = document.querySelector(".linea");
 lineas.onclick = function(){
-    anclas = document.querySelector(".anclas");
+    const anclas = document.querySelector(".anclas");
     anclas.classList.toggle("active");
 }
 
