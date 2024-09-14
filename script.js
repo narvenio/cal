@@ -1,3 +1,4 @@
+
 const boton     = document.getElementById("boton").value;
 const boton_descuento = document.getElementById("boton_descuento").value;
 const boton_aumento = document.getElementById("boton_aumento").value;
@@ -6,30 +7,23 @@ const precio_caido = document.getElementById("precio_caido").value;
 const resultado = document.getElementById("resultado");
 const descuento = document.getElementById("descuento");
 const porcentaje = document.getElementById("porcentaje");
+
+
 let porcentaje_deseado;
 let numero_total;
 let porcentaje_final;
 let descuento_final;
 let aumento;
 
-const lineas = document.querySelector(".linea");
-lineas.onclick = function(){
+function lineas(){
+    const lineas = document.querySelector(".linea");
     const anclas = document.querySelector(".anclas");
     anclas.classList.toggle("active");
 }
 
 
-//function lineas(){
-//    const lineas = document.querySelector(".linea");
-//    const anclas = document.querySelector(".anclas");
-//    anclas.classList.toggle("active");
-//}
-
-
 function scroll(){
-   
-     
-     
+       
         // continuar con el resto del codigo
         
         window.scrollTo(0, 1000);
@@ -163,29 +157,3 @@ function calcular_precio_caido(){
     borrar();
      
 }
-
-    
-                
-        
-    
-
-    
-
-   
-    
-
-   
-
-
-    
-                
-        
-    
-
-    
-
-   
-    
-
-   
-
