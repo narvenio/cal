@@ -1,7 +1,13 @@
+html{
+    scroll-behavior:smooth;
+
+}
+
 body{
     margin: 0;
     padding: 0;
    background-color: #ffffff;
+   
 }
 
 .logo{
@@ -28,7 +34,8 @@ body{
 
 .titulo{
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+
 }
 
 .productos{
@@ -97,7 +104,11 @@ h1{
     .logo{
         height: 50px;
     }
-    
+    .anclas.active{
+        height: 400px;
+        opacity: 1;
+        display:block;
+    }
     .anclas{
         height: 400px;
         top: 50px;
@@ -113,12 +124,6 @@ h1{
         display:none;
         transition: 0.5s;
     }
-    .anclas.active{
-        height: 400px;
-        opacity: 1;
-        display:block;
-        
-    }
     .anclas a{
         width: fit-content;
         display: block;
@@ -127,9 +132,6 @@ h1{
         bottom: 10px;
         transition: 0.5s;
         overflow: hidden;
-        
     }
-    
-    
-    
+  
 }
