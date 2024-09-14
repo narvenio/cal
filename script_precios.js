@@ -8,11 +8,30 @@ const resultados    = document.getElementById("resultado-todos");
 const resultado    = document.getElementById("resultado-individual");
 const calcular     = document.getElementById("calcular").value;
 
-const lineas = document.querySelector(".linea");
-lineas.onclick = function(){
+
+  function lineas(){
+    const lineas = document.querySelector(".linea");
     const anclas = document.querySelector(".anclas");
     anclas.classList.toggle("active");
-}
+  }
+
+  function delay(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  async function mostrar_scroll() {
+    console.log("inicio");
+  
+    // espera 2 segundos
+    await delay(500)
+  
+    console.log("despues de 2 segundos")
+  
+    // continuar con el resto del codigo
+    
+    window.scrollTo(0, 1000);
+  }
+
 
  function borrar(){
     document.getElementById("nombre_producto").value ="";
@@ -29,11 +48,13 @@ lineas.onclick = function(){
     let ganancia = Number(ganancia_esperada.value);
     
     if (producto == "" || cantidades == "" || precio_inicial == "" || ganancia == "" || iva == ""){
-        
+        mostrar_scroll();
         resultado.textContent = "Rellena Todos los Campos";
+       
+        
            
     }else{
-   
+    
     let aumento;
     let operacion_ganancia2;
     let operacion_precio_final;
@@ -50,6 +71,7 @@ lineas.onclick = function(){
     // Resultado en Pantalla
     //resultados.textContent = 
     resultado.textContent = `Cada ${producto} esta: ${precio_final_individual}$`;
+    mostrar_scroll();
     borrar();
    
     }
